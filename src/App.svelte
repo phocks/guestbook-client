@@ -5,7 +5,7 @@
   import { gql } from "@apollo/client";
 
   const client = new ApolloClient({
-    uri: "https://guestbook-api.phocks.org/apollo/",
+    uri: "https://guestbook-api.phocks.org/apollo",
     cache: new InMemoryCache(),
   });
 
@@ -19,8 +19,6 @@
       }
     }
   `);
-
-  console.log(posts);
 
   onMount(() => {
     // Do stuff on mount
