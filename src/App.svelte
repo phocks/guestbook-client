@@ -34,9 +34,11 @@
   {#if $posts.loading}
     Loading...
   {:else}
-    {#each $posts.data.posts as post}
-      {post.text}
-    {/each}
+    <ul>
+      {#each $posts.data.posts as post}
+        <li>{post.text}</li>
+      {/each}
+    </ul>
   {/if}
 </div>
 
