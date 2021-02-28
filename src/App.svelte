@@ -1,4 +1,4 @@
-<script lang='typescript'>
+<script>
   import { onMount } from "svelte";
   import { ApolloClient, InMemoryCache } from "@apollo/client";
   import { setClient, query } from "svelte-apollo";
@@ -21,9 +21,6 @@
   `);
 
   console.log(posts);
-
-
-
 
   onMount(() => {
     // Do stuff on mount
