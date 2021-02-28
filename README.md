@@ -1,4 +1,4 @@
-# New Project
+# A client facing app
 
 > ✨ Bootstrapped with Create Snowpack App (CSA).
 
