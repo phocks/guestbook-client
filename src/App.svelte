@@ -41,4 +41,9 @@
 </div>
 
 <style>
+  :global(body) {
+    font-size: 16px;
+	  margin: 0;
+	  font-family: Arial, Helvetica, sans-serif;
+	}
 </style>
