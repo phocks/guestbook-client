@@ -5,6 +5,7 @@
   import { gql } from "@apollo/client";
 
   let inputText = "";
+  
 
   const client = new ApolloClient({
     uri: "https://guestbook-api.phocks.org/apollo",
@@ -22,6 +23,10 @@
     }
   `);
 
+
+ 
+
+
   const addPost = mutation(gql`
     mutation AddPost($text: String!) {
       post(text: $text) {
@@ -35,6 +40,8 @@
     }
   `);
 
+
+
   onMount(() => {
     // Do stuff on mount
     console.log(":)");
@@ -45,9 +52,13 @@
 
   async function postText(event) {
     console.log(inputText);
-    addPost({ variables: { text: inputText } });
+    await addPost({ variables: { text: inputText } });
+    posts.refetch();
     inputText = "";
   }
+
+
+
 </script>
 
 <div class="App">
