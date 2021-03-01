@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte";
   import { ApolloClient, InMemoryCache } from "@apollo/client";
-  import { setClient, query } from "svelte-apollo";
+  import { setClient, query, mutation } from "svelte-apollo";
   import { gql } from "@apollo/client";
 
   let inputText = "";
@@ -22,6 +22,19 @@
     }
   `);
 
+  const addPost = mutation(gql`
+    mutation AddPost($text: String!) {
+      post(text: $text) {
+        success
+        message
+        post {
+          text
+          datetime
+        }
+      }
+    }
+  `);
+
   onMount(() => {
     // Do stuff on mount
     console.log(":)");
@@ -30,9 +43,10 @@
     };
   });
 
-  function postText(event) {
-    // console.log(event);
+  async function postText(event) {
     console.log(inputText);
+    addPost({ variables: { text: inputText } });
+    inputText = "";
   }
 </script>
 
