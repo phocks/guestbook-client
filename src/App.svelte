@@ -8,7 +8,7 @@
   
 
   const client = new ApolloClient({
-    uri: "https://guestbook-api.phocks.org/apollo",
+    uri: "https://guestbook-api.phocks.org/graphql",
     cache: new InMemoryCache(),
   });
 
