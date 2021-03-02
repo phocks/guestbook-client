@@ -96,6 +96,10 @@
     border: 1px solid rgb(139, 139, 139);
     border-radius: 0px;
   }
+  
+  .App input:required {
+    box-shadow:none;
+  }
 
   .App button {
     font-size: 16px;
