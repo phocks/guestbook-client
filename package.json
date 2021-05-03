@@ -5,7 +5,7 @@
     "test": "web-test-runner \"src/**/*.test.ts\""
   },
   "dependencies": {
-    "@apollo/client": "^3.3.11",
+    "@apollo/client": "^3.3.14",
     "graphql": "^15.5.0",
     "react": "^17.0.2",
     "svelte": "^3.24.0",
